@@ -43,7 +43,7 @@ python uninformed_search/bfs.py
 ```
 
 ## 📚 References
-- "Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig
+Slides from lectures at Da Nang University of Science and Technology
 
 ## 🤝 Contributing
 Feel free to open issues or submit pull requests if you have improvements or additional algorithms to contribute!
