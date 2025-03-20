@@ -1,40 +1,67 @@
-AI Search Algorithms
+# AI Search Algorithms
 
-This repository contains implementations of various AI search algorithms, categorized into uninformed (blind) search, informed (heuristic-based) search, and adversarial search.
+📌 **Giới thiệu**  
+Repo này chứa các thuật toán tìm kiếm trong trí tuệ nhân tạo (AI), bao gồm cả tìm kiếm mù, tìm kiếm có thông tin, và tìm kiếm có đối thủ.
 
-📌 Algorithms Included
+## 🏗 Cấu trúc repo
+```
+📂 ai-search-algorithms
+│── 📂 blind-search/          # Thuật toán tìm kiếm mù
+│    ├── bfs.py              # Tìm kiếm theo chiều rộng (BFS)
+│    ├── dfs.py              # Tìm kiếm theo chiều sâu (DFS)
+│    ├── ucs.py              # Tìm kiếm chi phí đồng nhất (UCS)
+│
+│── 📂 informed-search/       # Thuật toán tìm kiếm có thông tin
+│    ├── greedy-bfs.py       # Tìm kiếm tham lam (Greedy BFS)
+│    ├── a-star.py           # Tìm kiếm A*
+│
+│── 📂 adversarial-search/    # Thuật toán tìm kiếm có đối thủ
+│    ├── minimax.py          # Thuật toán Minimax
+│    ├── alpha-beta.py       # Cắt tỉa Alpha-Beta
+│
+│── README.md                # Hướng dẫn sử dụng
+```
 
-🔍 Uninformed Search (Blind Search)
+---
 
-Breadth-First Search (BFS) – Explores all nodes at the present depth before moving to the next depth level.
+## 🔍 Thuật toán tìm kiếm mù (Blind Search)
+Không sử dụng thông tin về đích, chỉ mở rộng các nút một cách có hệ thống.
 
-Depth-First Search (DFS) – Explores as far as possible along each branch before backtracking.
+- **BFS (Breadth-First Search)**: Tìm kiếm theo chiều rộng, duyệt từng tầng trước.
+- **DFS (Depth-First Search)**: Tìm kiếm theo chiều sâu, đi sâu vào một nhánh trước.
+- **UCS (Uniform-Cost Search)**: Tìm kiếm chi phí đồng nhất, mở rộng nút có chi phí thấp nhất.
 
-Uniform Cost Search (UCS) – Expands the least-cost node first, ensuring the optimal path is found.
+## 💡 Thuật toán tìm kiếm có thông tin (Informed Search)
+Sử dụng thông tin ước lượng để dẫn hướng tìm kiếm.
 
-🤖 Informed Search (Heuristic-Based)
+- **Greedy BFS**: Chọn nút có giá trị hàm heuristic nhỏ nhất.
+- **A***: Kết hợp chi phí thực tế và heuristic để tìm đường tối ưu.
 
-Greedy Best-First Search – Expands the node with the lowest heuristic value, aiming to reach the goal quickly.
+## 🎭 Thuật toán tìm kiếm có đối thủ (Adversarial Search)
+Dùng trong trò chơi đối kháng (game AI).
 
-A Search* – Combines UCS and Greedy BFS using the formula: f(n) = g(n) + h(n), ensuring optimality and efficiency.
+- **Minimax**: Duyệt cây trò chơi để tìm nước đi tốt nhất.
+- **Alpha-Beta Pruning**: Cải tiến Minimax để cắt tỉa những nhánh không cần thiết.
 
-🎭 Adversarial Search (Game AI)
+---
 
-Minimax Algorithm – A decision-making algorithm used in two-player games, assuming both players play optimally.
+## 🚀 Cách chạy các thuật toán
 
-Alpha-Beta Pruning – An optimization of Minimax that reduces the number of nodes evaluated, improving efficiency.
+Cài đặt Python nếu chưa có:
+```
+pip install -r requirements.txt
+```
+Chạy từng thuật toán bằng lệnh:
+```
+python blind-search/bfs.py
+python informed-search/a-star.py
+python adversarial-search/minimax.py
+```
 
-📂 Repository Structure
+---
 
-⚙️ How to Run
+## 📌 Đóng góp
+Bạn có thể đóng góp bằng cách tạo một **pull request** hoặc mở **issue**.
 
-Ensure you have Python installed. Clone the repository and run any script:
-
-📚 References
-
-"Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig
-
-🤝 Contributing
-
-Feel free to open issues or submit pull requests if you have improvements or additional algorithms to contribute!
+🌟 **Star repo nếu bạn thấy hữu ích!**
 
